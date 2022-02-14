@@ -1,0 +1,165 @@
+/*======================*/
+/*css reset*/
+/*======================*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*======================*/
+/*base*/
+:root {
+  /* colors */
+  --color-dark: 231 51% 12%;
+  --color-light: 231 76% 77%;
+  --color-white: 0 0% 100%;
+  /*font-sizes*/
+  --fs-title-400: 5.875rem;
+  --fs-title-300: 4.688rem;
+  --fs-title-200: 3.75rem;
+  --fs-title-100: 3rem;
+  --fs-indicator-500: 3.5rem;
+  --fs-indicator-400: 2.812rem;
+  --fs-indicator-300: 2.25rem;
+  --fs-indicator-200: 1.812rem;
+  --fs-indicator-100: 1.438rem;
+  --fs-primary-600: 1.938rem;
+  --fs-primary-500: 1.562rem;
+  --fs-primary-400: 1.25rem;
+  --fs-primary-300: 1rem;
+  --fs-primary-200: 0.812rem;
+  --fs-primary-100: 0.625rem;
+  /*font-familyes*/
+  --ff-title: "Oswald", sans-serif;
+  --ff-indicator: "Akaya Telivigala", cursive;
+  --ff-primary: "Roboto", sans-serif;
+}
+body {
+  font-family: var(--ff-primary);
+  background-color: hsl(var(--color-dark));
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/*======================*/
+
+/*---------------------*/
+/* Utility classes     */
+/*---------------------*/
+/*colors*/
+.bg-dark {
+  background-color: hsl(var(--color-dark));
+}
+.bg-light {
+  background-color: hsl(var(--color-light));
+}
+.bg-white {
+  background-color: hsl(var(--color-white));
+}
+.text-dark {
+  color: hsl(var(--color-dark));
+}
+.text-light {
+  color: hsl(var(--color-light));
+}
+.text-white {
+  color: hsl(var(--color-white));
+}
+/*layout*/
+.d-flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.d-grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+.flow > *:not(:last-child){
+    margin-bottom: 1rem;
+}
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width:80rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/*---------------------*/
